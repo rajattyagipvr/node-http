@@ -1,0 +1,120 @@
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-npsbr[0m
+{"level":"warn","ts":1594125958.687049,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1594125958.6886787,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-887ws[0m
+{"level":"warn","ts":1594125959.9500034,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1594125959.9511452,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-rajattyagipvr-node-http-master-8rqmh-56wdn[0m
+{"level":"warn","ts":1594125967.1186316,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1594125969.1633718,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*************/node-http.git @ v1.0.1 in path /workspace/source"}
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.1 No repository field.
+npm WARN REPLACE_ME@1.0.1 No license field.
+
+up to date in 1.142s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.1 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+2020/07/07 12:46:25 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0002] Downloading base image node:9-slim           
+2020/07/07 12:46:27 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0004] Taking snapshot of full filesystem...        
+[36mINFO[0m[0004] ENV PORT 8080                                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] EXPOSE 8080                                  
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0004] WORKDIR /usr/src/app                         
+[36mINFO[0m[0004] cmd: workdir                                 
+[36mINFO[0m[0004] Changed working directory to /usr/src/app    
+[36mINFO[0m[0004] Creating directory /usr/src/app              
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] Using files from context: [/workspace/source] 
+[36mINFO[0m[0004] COPY . .                                     
+[36mINFO[0m[0004] Taking snapshot of files...                  
+[36mINFO[0m[0004] CMD ["npm", "start"]                         
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2020/07/07 12:46:29 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/07/07 12:46:29 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/07/07 12:46:29 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/07/07 12:46:29 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/07/07 12:46:29 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/07/07 12:46:29 pushed blob: sha256:01939e1adbdeb46893e3dcced1958a3bc2e5f2bdf46f43d69ca9e1f5cf34384e
+2020/07/07 12:46:30 pushed blob: sha256:c35a997172bfcd15e8fbae3d75d1a477ffa446a5800a5335abea5f2c27e2d1ee
+2020/07/07 12:46:30 pushed blob: sha256:80b3516784d5d51c982c9e4324eb8b64393a5ef86d9403a2f641daa27889e85a
+2020/07/07 12:46:30 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/node-http:1.0.1: digest: sha256:dcb1f09dbc842a40783b34cf6875175da8621c05258fa7012309d41d6519fe7a size: 1404
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/node-http to an unshallow repository
+Generating change log from git ref 626dd025a9cf23a311c4899fee9a60b1c49487f4 => 80b5fe63d6dbe64d9eae3c79364adab7e8ddaab2
+WARNING: Failed to enrich commit 328c7d26b5a391a53456f39dde5bc1debeaae4bb with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 328c7d26b5a391a53456f39dde5bc1debeaae4bb with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for *************/node-http and tag v1.0.1 so creating a new release
+Updated the release information at https://github.com/*************/node-http/releases/tag/v1.0.1
+generated: /workspace/source/charts/node-http/templates/release.yaml
+Created Release node-http-1-0-1 resource in namespace **
+Updating PipelineActivity *************-node-http-master-3 with version 1.0.1
+Updated PipelineActivities *************-node-http-master-3 with release notes URL: https://github.com/*************/node-http/releases/tag/v1.0.1
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: bucketrepo http://bucketrepo/bucketrepo/charts/
+Successfully added Helm repository bucketrepo.
+Uploading chart file node-http-1.0.1.tgz to http://bucketrepo/bucketrepo/charts/api/charts
+Received 200 response: 
+
+Showing logs for build [32mrajattyagipvr-node-http-master-8rqmh-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app node-http version 1.0.1 to namespace **-staging
+WARNING: could not find upstream git URL failed to unmarshal  due to no GitConfDir defined
+Created Pull Request: https://github.com/*************/environment-cluster12-staging/pull/43
+Added label updatebot to Pull Request https://github.com/*************/environment-cluster12-staging/pull/43
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*************/environment-cluster12-staging/pull/43 ref b39e991e1272dabcaa048c9afed1a901c72ddb34 Could not find a status for repository *************/environment-cluster12-staging with ref b39e991e1272dabcaa048c9afed1a901c72ddb34
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/43
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/43
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/43
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/43
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/43
+got git provider status pending from PR https://github.com/*************/environment-cluster12-staging/pull/43
+Pull Request https://github.com/*************/environment-cluster12-staging/pull/43 is merged at sha 88e198238ebd63e86466c90f11a8591b3b67be4f
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names node-http, **-node-http, **-staging-node-http
